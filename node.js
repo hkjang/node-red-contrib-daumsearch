@@ -23,7 +23,7 @@ module.exports = function (RED) {
                 if(node.api){
                     node.url = 'https://dapi.kakao.com/v2/search/'+ node.api.toLowerCase();
                 }else{
-                    node.url = 'https://dapi.kakao.com/v2/search/web.json';
+                    node.url = 'https://dapi.kakao.com/v2/search/web';
                 }
             }
             // node.error(node.url);
