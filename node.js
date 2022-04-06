@@ -20,7 +20,9 @@ module.exports = function (RED) {
                 }
             }
             if(!node.url){
-                if(node.api){
+                if(node.api === 'book'){
+                    node.url = 'https://dapi.kakao.com/v3/search/'+ node.api.toLowerCase();
+                }else if(node.api){
                     node.url = 'https://dapi.kakao.com/v2/search/'+ node.api.toLowerCase();
                 }else{
                     node.url = 'https://dapi.kakao.com/v2/search/web';
