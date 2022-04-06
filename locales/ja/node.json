@@ -10,9 +10,9 @@
     "desc" : {
       "api": "kind of search API(web,vclip,image,blog,book,cafe)",
       "query": "検索語を入力してください",
-      "size": "検索結果の出力件数指定",
+      "size": "1ページに表示される文書数、1〜50の値、デフォルト値10",
       "sort": "ソート方式、accuracy（精度順）またはrecency（最新順）、デフォルト値accuracy",
-      "page": "検索の開始位置で最大1000まで可能"
+      "page": "結果ページ番号、1〜50の値、デフォルト値1"
     }
   }
 }

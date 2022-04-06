@@ -10,9 +10,9 @@
     "desc" : {
       "api": "kind of search API(web,vclip,image,blog,book,cafe)",
       "query": "query for search search",
-      "size": "Search pageing position up to 1000 possible",
+      "size": "Number of documents to be displayed per page, value between 1-50, default value 10",
       "sort": "sort method, accuracy or recency, default accuracy",
-      "page": "Search pageing position up to 1000 possible"
+      "page": "Results page number, a value between 1 and 50, defaults to 1"
     }
   }
 }

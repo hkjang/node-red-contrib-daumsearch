@@ -38,7 +38,7 @@ module.exports = function (RED) {
                 node.options.params.size = n.size;
                 node.options.params.page = n.page;
             }
-            node.options.headers['Authorization'] = node.restApiKey;
+            node.options.headers['Authorization'] = 'KakaoAK ' + node.restApiKey;
 
             axios.get(node.url, node.options)
                 .then(function (response){
