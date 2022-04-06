@@ -1,0 +1,18 @@
+{
+  "daumsearch" : {
+    "label" : {
+      "api": "api",
+      "query": "検索語",
+      "size": "出力件数",
+      "sort": "並べ替え",
+      "page": "検索の開始位置"
+    },
+    "desc" : {
+      "api": "kind of search API(web,vclip,image,blog,book,cafe)",
+      "query": "検索語を入力してください",
+      "size": "検索結果の出力件数指定",
+      "sort": "ソート方式、accuracy（精度順）またはrecency（最新順）、デフォルト値accuracy",
+      "page": "検索の開始位置で最大1000まで可能"
+    }
+  }
+}

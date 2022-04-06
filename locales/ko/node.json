@@ -1,0 +1,18 @@
+{
+  "daumsearch" : {
+    "label" : {
+      "api": "API",
+      "query": "검색어",
+      "size": "출력 건수",
+      "sort": "정렬",
+      "page": "검색시작위치"
+    },
+    "desc" : {
+      "api": "API 종류(web,vclip,image,blog,book,cafe)",
+      "query": "검색어를 입력해 주세요",
+      "size": "검색 결과 출력 건수 지정",
+      "sort": "정렬 방식, accuracy(정확도순) 또는 recency(최신순), 기본 값 accuracy",
+      "page": "검색 시작 위치로 최대 1000까지 가능"
+    }
+  }
+}

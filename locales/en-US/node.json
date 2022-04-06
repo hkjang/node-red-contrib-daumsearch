@@ -1,0 +1,18 @@
+{
+  "daumsearch" : {
+    "label" : {
+      "api": "api",
+      "query": "query",
+      "size": "size",
+      "sort": "sort",
+      "page": "page"
+    },
+    "desc" : {
+      "api": "kind of search API(web,vclip,image,blog,book,cafe)",
+      "query": "query for search search",
+      "size": "Search pageing position up to 1000 possible",
+      "sort": "sort method, accuracy or recency, default accuracy",
+      "page": "Search pageing position up to 1000 possible"
+    }
+  }
+}

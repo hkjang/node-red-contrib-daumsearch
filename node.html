@@ -1,0 +1,114 @@
+<script type="text/html" data-template-name="daumsearch">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span
+                data-i18n="node-red:common.label.name"></span></label>
+        <input type="text" id="node-input-name" data-i18n="[placeholder]node-red:common.label.name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-creds"> <i class="fa fa-key fa-fw"></i> API key</span></label>
+        <input type="text" id="node-input-creds">
+    </div>
+    <div class="form-row"><label for="node-input-api"><i class="fa"></i> <span
+            data-i18n="daumsearch.label.api"></span> </label> <input type="text"
+                                                                        id="node-input-api"
+                                                                        data-i18n="[placeholder]daumsearch.desc.api">
+    </div>
+    <div class="form-row"><label for="node-input-query"><i class="fa"></i> <span
+            data-i18n="daumsearch.label.query"></span> </label> <input type="text"
+                                                                      id="node-input-query"
+                                                                      data-i18n="[placeholder]daumsearch.desc.query">
+    </div>
+    <div class="form-row"><label for="node-input-size"><i class="fa"></i> <span
+            data-i18n="daumsearch.label.size"></span></label> <input type="text"
+                                                                       id="node-input-size"
+                                                                       data-i18n="[placeholder]daumsearch.desc.size">
+    </div>
+    <div class="form-row"><label for="node-input-sort"><i class="fa"></i> <span data-i18n="daumsearch.label.sort"></span></label>
+        <input type="text"
+               id="node-input-sort"
+               data-i18n="[placeholder]daumsearch.desc.sort">
+    </div>
+    <div class="form-row"><label for="node-input-page"><i class="fa"></i> <span
+            data-i18n="daumsearch.label.page"></span></label> <input type="text"
+                                                                     id="node-input-page"
+                                                                     data-i18n="[placeholder]daumsearch.desc.page">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="daumsearch">
+    <p>Summary of the node.</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>payload<span class="property-type">object</span></dt>
+        <dd>Explanation of payload.</dd>
+        <dt class="optional">topic <span class="property-type">string</span></dt>
+        <dd>Explanation of topic.</dd>
+    </dl>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>payload<span class="property-type">object</span></dt>
+        <dd>Explanation of payload.</dd>
+        <dt class="optional">topic<span class="property-type">string</span></dt>
+        <dd>Explanation of topic.</dd>
+    </dl>
+    <h3>Details</h3>
+    <p>Explanation of the details.</p>
+    <p><b>Note</b>: Note of the node.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('daumsearch', {
+        color: '#ffffff',
+        category: 'function',
+        defaults: {
+            name: {value: ''},
+            api: {value: "", required: false},
+            query: {value: "", required: false},
+            size: {value: "", required: false},
+            sort: {value: "", required: false},
+            page: {value: "", required: false},
+            creds: {
+                value: "",
+                type: "kakaoRestApiKey"
+            },
+        },
+        inputs: 1,
+        outputs: 1,
+        label: function () {
+            return this.name || 'daum search';
+        },
+        icon: 'icon.png',
+        align: 'left'
+    });
+</script>
+
+
+<script type="text/x-red" data-template-name="kakaoRestApiKey">
+    <div class="form-row">
+        <label for="node-input-name"> <i class="fa fa-tag fa-fw"></i> Name</label>
+        <input type="text" id="node-config-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+      <label for="node-config-input-restApiKey"> REST API KEY</label>
+      <input type="text" id="node-config-input-restApiKey" placeholder="REST API KEY">
+    </div>
+
+
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('kakaoRestApiKey', {
+        category: 'config',
+        defaults: {
+            name: {value: ""}
+        },
+        credentials: {
+            restApiKey: {}
+        },
+        label: function () {
+            return this.name || 'API Key';
+        }
+    });
+</script>
+
